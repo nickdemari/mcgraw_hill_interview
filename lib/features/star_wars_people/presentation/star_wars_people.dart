@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/models/star_wars_person.dart';
+import '../../star_wars_person/presentation/star_wars_person_detail_screen.dart';
 import '../domain/star_wars_people_viewmodel.dart';
 
 class StarWarsPeopleScreen extends StatelessWidget {
@@ -42,25 +42,6 @@ class StarWarsPeopleScreen extends StatelessWidget {
         tooltip: 'Load People',
         child: const Icon(Icons.refresh),
       ),
-    );
-  }
-}
-
-class StarWarsPersonDetailScreen extends StatelessWidget {
-  const StarWarsPersonDetailScreen({super.key, required this.starWarsPerson});
-  final StarWarsPerson starWarsPerson;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(starWarsPerson.name),
-      ),
-      body: Center(
-          child: Column(
-        children: [
-          Text('Birth Year: ${starWarsPerson.birthYear}'),
-        ],
-      )),
     );
   }
 }
