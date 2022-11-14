@@ -29,6 +29,7 @@ void main() {
   });
 
   group('StarWarsPeopleScreen', () {
+    initLocator();
     testWidgets('title should read "Star Wars People"', (WidgetTester tester) async {
       await tester.pumpWidget(
         MultiProvider(
